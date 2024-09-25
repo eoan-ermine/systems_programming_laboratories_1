@@ -1,5 +1,5 @@
 section .data
-    format: db '%d\n',10
+    format: db '%d',10
 
 global main
 section .text
