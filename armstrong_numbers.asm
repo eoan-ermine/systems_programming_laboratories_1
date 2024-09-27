@@ -45,7 +45,7 @@ __loop1:
 main:
     mov rbp, rsp; for correct debugging
     mov r15, 1
- 
+
  __loop3:
     mov rbx, r15 ; int original_number
     mov r12, r15 ; int number = 1
@@ -72,7 +72,7 @@ __continue_iter:
     inc r15
     cmp r15, 0
     jne __loop3
-    
+
     ret
 __loop2:
     mov rax, r12
@@ -80,11 +80,10 @@ __loop2:
     mov rcx, 10
     idiv rcx ; rax - результат, rdx - остаток
     mov r12, rax
-    
+
     mov rcx, rdx
     mov rdx, r14
     call pow
     add r13, rax
-    
+
     jmp __condition2
-    
